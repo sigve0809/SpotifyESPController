@@ -54,6 +54,6 @@ private:
   String pscope = "user-read-playback-state%20user-modify-playback-state%20playlist-read-private";
   const char *callbackURI;
   bool *needRefresh;
-  String pclientId = "03fbc0234d1b48de8f32d01ba7c6402d";     // Your client ID of your spotify APP
-  String pclientSecret = "3e58c52ae52e4b6c8310bcd7e20c390f"; // Your client Secret of your spotify APP (Do Not share this!)
+  String pclientId = "**********";     // Your client ID of your spotify APP
+  String pclientSecret = "***********"; // Your client Secret of your spotify APP (Do Not share this!)
 };
