@@ -52,9 +52,9 @@ String WebServerCallback::ParseJson(String key, String json)
       WiFiClient client;
       HTTPClient http;
 
-      String clientID = "03fbc0234d1b48de8f32d01ba7c6402d";
-      String clientSECRET = "3e58c52ae52e4b6c8310bcd7e20c390f";
-      String body = "grant_type=refresh_token&refresh_token=AQAelUd8ductxXhvp-o5rrX_sQuVxsBeMp1UpMmUioctnJUjGarnJfcl3v3Abi7EM0Fn8V7nGEWohN9Zkp0HtnvZEcSC43kv1mUd6tIiNFxcc5ns-2DURBwRi8Ylew2hxYs";
+      String clientID = "**************";
+      String clientSECRET = "*************";
+      String body = "grant_type=refresh_token&refresh_token=****************";
       String authorizationRaw = clientID + ":" + clientSECRET;
       String authorization = base64::encode(authorizationRaw);
       // Your Domain name with URL path or IP address with path
