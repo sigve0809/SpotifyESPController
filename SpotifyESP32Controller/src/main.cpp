@@ -3,8 +3,8 @@
 #include "WebServerCallback.h"
 #include "Playlists.h"
 
-char ssid[] = "bitraf";                // your network SSID (name)
-char password[] = "grimbadgerassault"; // your network password
+char ssid[] = "********";                // your network SSID (name)
+char password[] = "********";; // your network password
 bool needRefresh = true;
 bool *pNeedRefresh = &needRefresh;
 
@@ -28,6 +28,9 @@ const int buttonPin3 = 32;
 int buttonState1 = 0; // variable for reading the pushbutton status
 int buttonState2 = 0;
 int buttonState3 = 0;
+
+String clientId = "*************";
+String clientSecret = "****************";
 
 unsigned long lastTime = 0;
 // Timer set to 10 minutes (600000)
@@ -57,7 +60,7 @@ void setup()
   Serial.println(ipAddress);
 
   WiFiClientSecure client;
-  wsCallback = new WebServerCallback(80, client, "03fbc0234d1b48de8f32d01ba7c6402d", "3e58c52ae52e4b6c8310bcd7e20c390f", "", pNeedRefresh, pAuthToken);
+  wsCallback = new WebServerCallback(80, client, clientId, clientSecret, "", pNeedRefresh, pAuthToken);
   apiCalls = new ApiCalls(pNeedRefresh, pAuthToken);
   infraRedReciever = new InfraRedReciever(26);
   tftManager = new TFTManager(2, 15, -1);
